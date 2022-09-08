@@ -1,14 +1,50 @@
 {
   "pages":[
+    "pages/home/home",
+    "pages/my/my",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/orders/orders",
+    "pages/find/find"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
   },
+  "tabBar": {
+    "borderStyle": "black",
+    "custom": false,
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/icons/me.png",
+        "selectedIconPath": "static/icons/_me.png"
+      },
+      {
+        "pagePath": "pages/orders/orders",
+        "text": "订单",
+        "iconPath": "static/icons/order.png",
+        "selectedIconPath": "static/icons/_order.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "static/icons/find.png",
+        "selectedIconPath": "static/icons/_find.png"
+      },
+      {
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "static/icons/home.png",
+      "selectedIconPath": "static/icons/_home.png"
+    }
+    ]
+  },
+  "usingComponents":{},
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
