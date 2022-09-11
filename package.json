@@ -1,0 +1,23 @@
+{
+  "name": "intelligenceparking",
+  "version": "1.0.0",
+  "description": "停车管理微信小程序",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wubbarick-y/IntelligenceParking.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wubbarick-y/IntelligenceParking/issues"
+  },
+  "homepage": "https://github.com/Wubbarick-y/IntelligenceParking#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.10.5",
+    "miniprogram-sm-crypto": "^0.3.11"
+  }
+}
