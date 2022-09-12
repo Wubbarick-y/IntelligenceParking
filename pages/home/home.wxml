@@ -1,4 +1,57 @@
 <!--pages/home/home.wxml-->
-<van-button type="primary">
-    test
-</van-button>
+<view class="top-box">
+    <view>
+        <van-search
+            background="#6488d4"
+            class="dist-search"
+            value="{{ distination_place }}"
+            right-icon="https://s2.loli.net/2022/09/12/Z2idJBfQHtLM4ma.png"
+            placeholder="您要去哪里？可语音输入目的地"
+            use-action-slot>
+            <view slot="action"><van-icon name="https://s2.loli.net/2022/09/12/FceE6CMWt2wq4fp.png" size="large" /></view>
+        </van-search>
+        <view>
+            <van-tag>哈尔滨</van-tag>
+        </view>
+        <view class="information-box">
+            <view>
+                <image src="https://s2.loli.net/2022/09/12/mulqpjIXZfFoPnS.png" class="weather-image absolute-position" />
+                <view class="weather-text absolute-position">小雨</view>
+            </view>
+            <view>
+                <view class="xianxing absolute-position">今日限行</view>
+                <view class="xianxinghao absolute-position">单号</view>
+            </view>
+            <view>
+                <view class="current-temperature absolute-position">24℃</view>
+                <view class="temperature absolute-position">14~23℃</view>
+            </view>
+            <view>
+                <view class="pm-value absolute-position">PM2.5</view>
+                <view class="air-value absolute-position">10 优</view>
+            </view>
+        </view>
+    </view>
+</view>
+                
+<view class="medium-information">
+    <image class="medium-avatar-image" src="https://s2.loli.net/2022/09/12/QyY8lJifRM2aDvk.png" />
+    <view class="medium-text">Fc俊积分兑换5元停车券</view>
+</view>
+
+<view class="saomahezhaoche">
+    <view class="saoma">
+        <image class="saoma-image" src="https://s2.loli.net/2022/09/12/KVw1CvLxyZhXeQd.png" />
+        <view class="saoma-text">扫码付费</view>
+    </view>
+
+    <view class="zhaoche">
+        <image class="zhaoche-image" src="https://s2.loli.net/2022/09/12/YXPfIalUZwkzLM4.png" />
+        <view class="zhaoche-text">场内找车</view>
+    </view>
+</view>
+
+<view class="daohang">
+    <image class="daohang-image" src="https://s2.loli.net/2022/09/12/yeVD4TOwrKoWQFL.png" />
+    <view class="daohang-text">找车位 | 车场导航 | 充电站</view>
+</view>

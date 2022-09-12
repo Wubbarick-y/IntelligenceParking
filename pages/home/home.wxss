@@ -1,1 +1,170 @@
 /* pages/home/home.wxss */
+.top-box {
+    height: calc(44vh);
+    width: calc(100vw);
+    background-image: url('https://s2.loli.net/2022/09/12/JaduXmKeCV7WtwS.jpg');
+}
+
+.information-box {
+    border-radius: 3px;
+    margin: 5px 8px 0 8px;
+    height: calc(20vh);
+    width: calc(100vw - 16px);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    position: relative;
+}
+
+.absolute-position {
+    position: absolute;
+}
+
+.weather-image {
+    height: 20px;
+    width: 20px;
+    top: 17px;
+    left: 15px;
+}
+
+.weather-text {
+    top: 17px;
+    left: 40px;
+}
+
+.xianxing {
+    top: 17px;
+    left: 170px;
+}
+
+.xianxinghao {
+    top: 17px;
+    left: 230px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.current-temperature {
+    top: 40px;
+    left: 15px;
+    font-size: 17px;
+}
+
+.temperature {
+    top: 45px;
+    left: 55px;
+}
+
+.pm-value {
+    top: 45px;
+    left: 170px;
+}
+
+.air-value {
+    top: 45px;
+    left: 210px;
+    border-radius: 4px;
+    background-color: #02bd6f;
+}
+
+.medium-information {
+    margin-left: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.medium-avatar-image {
+    height: 20px;
+    width: 20px;
+}
+
+.medium-text {
+    position: absolute;
+    top: 1px;
+    left: 23px;
+    font-size: 12px;
+}
+
+.saomahezhaoche {
+    position: relative;
+}
+
+.saoma {
+    margin-left: calc(3vw);
+    margin-top: 10px;
+    position: absolute;
+    width: calc(45vw);
+    height: calc(37vh);
+    background-color: #fdca4a;
+    border-radius: 6px;
+}
+
+.saoma-image {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.saoma-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    color: rgb(255, 255, 255);
+}
+
+.zhaoche {
+    position: absolute;
+    width: calc(45vw);
+    height: calc(37vh);
+    border-radius: 6px;
+    background-color: #44a5f4;
+    margin-top: 10px;
+    right: calc(3vw)
+}
+
+.zhaoche-image {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.zhaoche-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    color: rgb(255, 255, 255);
+}
+
+.daohang {
+    position: relative;
+    width: calc(94vw);
+    height: calc(30vh);
+    border-radius: 6px;
+    margin-left: calc(3vw);
+    top: calc(37vh + 6vw);
+    background-color: #33cc8b;
+}
+
+.daohang-image {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.daohang-text {
+    position: absolute;
+    top: 63%;
+    left: 18%;
+    color: rgb(255, 255, 255);
+}
