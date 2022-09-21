@@ -1,0 +1,6 @@
+<van-tabbar active="{{ active }}" bind:change="onChange" placeholder="true">
+  <van-tabbar-item  icon="home-o">首页</van-tabbar-item>
+  <van-tabbar-item  icon="description">订单</van-tabbar-item>
+  <van-tabbar-item  icon="location-o">发现</van-tabbar-item>
+  <van-tabbar-item  icon="user-o">我的</van-tabbar-item>
+</van-tabbar>

@@ -1,2 +1,17 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<van-row>
+    <van-col span="8" offset="4">
+        <van-image 
+        round
+        width="5rem"
+        height="5rem"
+        src="{{userInfo.avatarUrl}}"/>
+    </van-col>
+
+</van-row>
+
+
+<van-row>
+  <van-button class="primary" bindtap="wxLogin">
+      test
+  </van-button>
+</van-row>

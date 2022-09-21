@@ -1,11 +1,14 @@
 // pages/my/my.js
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userInfo:[],
+    show:false
   },
 
   /**
@@ -26,7 +29,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this.getTabBar().setData({
+      active:3
+    })
   },
 
   /**
@@ -62,5 +67,19 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  wxLogin(){
+    var that = this
+    wx.getUserProfile({
+      desc: '完整信息',
+      success(res){
+        var user = res.userInfo
+        app.globalData.userInfo = user
+        that.setData({
+          userInfo: user,
+          show:true
+        })
+      }
+    })
   }
 })
