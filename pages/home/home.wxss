@@ -168,3 +168,10 @@
     left: 18%;
     color: rgb(255, 255, 255);
 }
+
+#empty-block {
+    position: relative;
+    width: calc(100vw);
+    height: calc(21vh);
+    top: calc(30vh);
+}

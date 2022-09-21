@@ -55,3 +55,5 @@
     <image class="daohang-image" src="https://s2.loli.net/2022/09/12/yeVD4TOwrKoWQFL.png" />
     <view class="daohang-text">找车位 | 车场导航 | 充电站</view>
 </view>
+
+<view id="empty-block"></view>
