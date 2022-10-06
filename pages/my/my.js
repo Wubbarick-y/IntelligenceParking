@@ -8,13 +8,42 @@ Page({
    */
   data: {
     userInfo:[],
-    show:false
+    show:false,
+    code: null,
+    iv: null,
+    encryptedData: null,
+    sessionId:null,
+    openid:null,
+    token:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    let that = this
+    wx.login({
+      success(res){
+        console.log(res.code)
+        wx.request({
+          url:"http://localhost/users/session",
+          data:{
+            code:res.code
+          },
+          method:"POST",
+          success(res){
+            console.log(res)
+            that.setData({
+              sessionId:res.data.data.SessionId,
+              openid:res.data.data.openid
+            })
+          }
+          
+        })
+      }
+    })
+
+    
 
   },
 
@@ -46,6 +75,7 @@ Page({
    */
   onUnload() {
 
+
   },
 
   /**
@@ -73,13 +103,56 @@ Page({
     wx.getUserProfile({
       desc: '完整信息',
       success(res){
-        var user = res.userInfo
-        app.globalData.userInfo = user
         that.setData({
-          userInfo: user,
-          show:true
+          vi:res.iv,
+          encryptedData:res.encryptedData
         })
+        wx.request({
+          url:"http://localhost/users/authLogin",
+          method:"POST",
+          data:{
+            iv:that.data.vi,
+            encryptedData:that.data.encryptedData,
+            sessionId:that.data.sessionId,
+            openid:that.data.openid
+          },
+          success(res){
+            that.setData({
+              token:res.data.data.token
+              
+            }
+            )
+            wx.request({
+              url: 'http://localhost/users/userinfo',
+              method:'GET',
+              header:{
+                Authorization:that.data.token
+              },
+              data:{
+                refresh:true
+              },
+              success(res){
+                var user = res.data.data
+                app.globalData.userInfo = user
+                that.setData({
+                  userInfo: user,
+                  show:true,
+                })
+                console.log(user)
+                console.log(app.globalData.userInfo)
+                console.log(that.data.userInfo)
+              }
+            
+            })
+          }
+        })                                              
       }
-    })
+      
+    }
+    )
+    
+    
+    
+  
   }
 })

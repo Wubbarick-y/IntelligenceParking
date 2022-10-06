@@ -1,12 +1,17 @@
 <van-row>
-    <van-col span="8" offset="4">
+    <van-col span="8" offset="4" style="position: relative; left: 150rpx; top: 330rpx">
         <van-image 
         round
         width="5rem"
         height="5rem"
-        src="{{userInfo.avatarUrl}}"/>
+        src="{{userInfo.portrait}}"/>
     </van-col>
+</van-row>
 
+<van-row>
+    <van-col>
+        {{userInfo.nickname}}
+    </van-col>
 </van-row>
 
 
