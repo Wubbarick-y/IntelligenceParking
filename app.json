@@ -1,18 +1,19 @@
 {
-  "pages":[
+  "pages": [
     "pages/my/my",
     "pages/home/home",
-  
     "pages/index/index",
     "pages/logs/logs",
     "pages/orders/orders",
-    "pages/find/find"
+    "pages/find/find",
+    "pages/info/myinfo/myinfo",
+    "pages/info/change/changeMyinfo/changeMyinfo"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   },
   "tabBar": {
@@ -38,21 +39,24 @@
         "selectedIconPath": "static/icons/_find.png"
       },
       {
-      "pagePath": "pages/my/my",
-      "text": "我的",
-      "iconPath": "static/icons/home.png",
-      "selectedIconPath": "static/icons/_home.png"
-    }
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/icons/home.png",
+        "selectedIconPath": "static/icons/_home.png"
+      }
     ]
   },
-  "usingComponents":{
-    "van-button":"@vant/weapp/button/index",
-    "van-row":"@vant/weapp/row/index",
-    "van-col":"@vant/weapp/col/index",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
     "van-image": "@vant/weapp/image/index",
-    "van-icon": "@vant/weapp/icon/index"
-    
-    
+    "van-icon": "@vant/weapp/icon/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-toast": "@vant/weapp/toast/index"
   },
   "sitemapLocation": "sitemap.json"
 }

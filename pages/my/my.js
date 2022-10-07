@@ -138,8 +138,6 @@ Page({
                   userInfo: user,
                   show:true,
                 })
-                console.log(user)
-                console.log(app.globalData.userInfo)
                 console.log(that.data.userInfo)
               }
             

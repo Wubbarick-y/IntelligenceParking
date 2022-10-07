@@ -1,5 +1,5 @@
 <van-row>
-    <van-col span="8" offset="4" style="position: relative; left: 150rpx; top: 330rpx">
+    <van-col span="8" offset="4" style="position: relative; left: 152rpx; top: 84rpx">
         <van-image 
         round
         width="5rem"
@@ -8,15 +8,32 @@
     </van-col>
 </van-row>
 
-<van-row>
-    <van-col>
-        {{userInfo.nickname}}
-    </van-col>
-</van-row>
+<van-row></van-row>
 
+<van-cell-group style="position: relative; left: 0rpx; top: 228rpx">
+  <van-cell center
+  size="large"
+   style="position: relative; left: 0rpx; top: 0rpx" 
+    is-link ="false"
+    title="个人信息"
+    link-type="navigateTo"
+    url="/pages/info/myinfo/myinfo"
+    />
 
-<van-row>
-  <van-button class="primary" bindtap="wxLogin">
-      test
+    <van-cell 
+    size="large"
+    center
+    style="position: relative; left: 0rpx; top: 0rpx"
+      is-link="false"
+      title="车辆信息"
+      link-type="navigateTo"
+      url="/pages/info/carinfo/carinfo"
+    />  
+</van-cell-group>
+
+<van-row style="position: relative; left: 0rpx; top: 588rpx">
+  <van-button plain hairline type="primary" 
+  bindtap="wxLogin" block style="position: relative; left: 0rpx; top: 0rpx">
+      登录
   </van-button>
 </van-row>

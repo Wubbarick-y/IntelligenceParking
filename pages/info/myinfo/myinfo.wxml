@@ -1,0 +1,37 @@
+<!--pages/info/myinfo/myinfo.wxml-->
+<van-cell-group>
+  <van-cell center title="我的头像" size="large">
+    <van-row style="width: 246rpx; height: 176rpx; display: block; box-sizing: border-box; position: relative; left: 97rpx; top: 0rpx">
+      
+      <van-image 
+      round
+      width="5rem"
+      height="5rem"
+      src="{{userInfo.portrait}}"/>
+      
+    </van-row>
+  </van-cell>
+  <van-cell center title="我的用户名" size="large" value="{{userInfo.nickname}}"
+             />
+  <van-cell center title="性别" size="large" > 
+    <view wx:if="{{userInfo.gender == '0'}}">
+      暂无
+    </view>
+    <view wx:else="{{userInfo.gender != '0'}}">
+      {{userInfo.gender}}
+    </view>
+  </van-cell>
+  <van-cell center title="电话号" size="large">
+    <view wx:if="{{userInfo.phoneNumber == ''}}">
+      暂无
+    </view>
+    <view wx:else="{{userInfo.phoneNumber != ''}}">
+      {{userInfo.phoneNumber}}
+    </view>
+  </van-cell>  
+</van-cell-group>
+
+<van-button type="info" bind:click="onClick" style="position: relative; left: 287rpx; top: 220rpx">
+  修改信息
+</van-button>
+

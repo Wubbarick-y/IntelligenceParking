@@ -1,0 +1,50 @@
+<!--pages/info/change/changeMyinfo/changeMyinfo.wxml-->
+
+<van-toast id="van-toast" />
+
+
+<van-cell-group>
+    <van-field
+    label="用户名"
+    value="{{userInfo.nickname}}"
+    size="large"
+    bind:input="onNicknameChange"
+    center
+    input-align="right"
+    />
+    
+    <van-cell center
+    clickable="true" 
+    title="性别" size="large" 
+    bind:click="onClick"
+    > 
+        <view wx:if="{{userInfo.gender == '0'}}">
+          暂无
+        </view>
+        <view wx:else="{{userInfo.gender != '0'}}">
+          {{userInfo.gender}}
+        </view>
+      </van-cell>
+
+      <van-field
+      label="手机号"
+      value="{{userInfo.phoneNumber}}"
+      size="large"
+      bind:input="onPhoneNumberChange"
+      center
+
+      input-align="right"
+      />
+</van-cell-group>
+
+    <van-button type="primary" bind:click="OnSubmit" style="position: relative; left: 315rpx; top: 166rpx"
+    >提交</van-button>
+
+
+<van-picker 
+show-toolbar
+title="性别"
+wx:if="{{sexShow}}" columns="{{sexColumns}}" bind:confirm="onConfirm" bind:cancel="onCancel"/>
+
+
+
