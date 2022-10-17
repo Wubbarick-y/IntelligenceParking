@@ -1,2 +1,39 @@
 <!--pages/orders/orders.wxml-->
-<text>pages/orders/orders.wxml</text>
+<van-cell-group inset>
+  <van-cell 
+    title="日期区间" 
+    is-link clickable 
+    value="{{ date }}" 
+    bind:click="onDisplay" 
+    id="date-cell" />
+</van-cell-group>
+
+<van-cell-group border="{{ false }}">
+  <van-cell />
+  <van-cell wx:for="{{ 10 }}" clickable 
+  bindtap="gotoDetail" id="order-cell">
+
+    <van-card
+      price="2.00"
+      desc="订单描述"
+      title="订单标题"
+      thumb="{{ imageURL }}"
+    />
+
+  </van-cell>
+</van-cell-group>
+
+<view id="bottom-position"></view>
+
+<van-calendar
+  show="{{ show }}"
+  show-confirm="{{ false }}"
+  min-date="{{ minDate }}"
+  max-date="{{ maxDate }}"
+  type="range"
+  bind:close="onClose"
+  bind:confirm="onConfirm"
+/>
+
+
+<!-- <button bindtap="gotoDetail">跳转进详情页面</button> -->

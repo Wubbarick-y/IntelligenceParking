@@ -1,1 +1,13 @@
 /* pages/orders/orders.wxss */
+#date-cell .van-cell__value {
+  min-width: 200px;
+}
+
+#order-cell .van-cell__value {
+  min-width: 100%;
+  text-align: left;
+}
+
+#bottom-position {
+  height: 85px;
+}

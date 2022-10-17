@@ -5,6 +5,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/orders/orders",
+    "pages/orders/orderDetail/orderDetail",
     "pages/find/find",
     "pages/info/myinfo/myinfo",
     "pages/info/change/changeMyinfo/changeMyinfo"
